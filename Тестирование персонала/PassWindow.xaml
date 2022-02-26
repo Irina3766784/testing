@@ -1,0 +1,39 @@
+﻿<Window x:Class="Тестирование_персонала.PassWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Тестирование_персонала"
+        mc:Ignorable="d"
+        Title="Тестирование" Height="726.224" Width="500">
+    <Grid Background="#dcdde2" Margin="0,0,0,0">
+        <Label Content="Вопрос:" FontSize="20" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="QuestionNumberLabel" Content="" FontSize="20" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Source="{Binding Path=ImagePath}" Height="200" Margin="92,55,0,0" VerticalAlignment="Top" Width="300"/>
+        <ScrollViewer Margin="92,349,-0.4,94.8">
+            <StackPanel x:Name="AnswersStackPanel" Orientation="Vertical"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="302"/>
+        </ScrollViewer>
+        <Button x:Name="BackButton" Content="&lt;" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,633,0,0" VerticalAlignment="Top" Width="35" Click="BackButton_Click" Background="#FFB7CED2" FontSize="20" Foreground="Black" BorderBrush="#FF528E86" Height="35" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="NextButton" Content=">" FontWeight="Bold" HorizontalAlignment="Left" Margin="432,633,0,0" VerticalAlignment="Top" Width="35" Click="NextButton_Click" Background="#FFB7CED2" FontSize="20" Foreground="Black" BorderBrush="#FF528E86" Height="35" RenderTransformOrigin="5.246,0.651" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="PassButton" Content="Закончить тест" HorizontalAlignment="Left" Margin="152,633,0,0" VerticalAlignment="Top" Width="178" Click="PassButton_Click" Background="#FFB7CED2" FontSize="20" Foreground="Black" BorderBrush="#FF528E86" Height="35" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock x:Name="QuestionTextLabel" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="474" Height="89" FontSize="20" TextWrapping="WrapWithOverflow"/>
+    </Grid>
+</Window>
